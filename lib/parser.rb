@@ -10,9 +10,9 @@ Main {
     description "The directory to put the produced csv files"
   }
   def run
-    multimap = Multimap.new
+    multimap = Hash.new{ | h, k| h[k] = [] }
     CSV.foreach(params['source_file_path'].value) do | row |
-      multimap[row.shift] = row.join(',') if (/^(?<num>\d+)$/ =~ row[0])
+      (multimap[row.shift] <<  row.join(',')) if (/^(?<num>\d+)$/ =~ row[0])
     end
 
     FileUtils.mkdir_p params['destination_dir'].value
