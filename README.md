@@ -31,7 +31,7 @@ The rest is as follows:
 
 * Open a command prompt and navigate to the directory that the HISC Parser exists. Directory should include the Gemfile and the lib directory.
 * Install dependencies by typing the following: `bundle install`
-* Once complete use the _full source file path_ (including the entire path "c:\directory\path\to\file\then_file.csv") and the _full destination directory_ and execute the script as follows: `ruby lib\parser.rb [full source file path] [full destiantion directory]`
+* Once complete use the _full source file path_ (including the entire path "/directory/path/to/file/then_file.csv") and the _full destination directory_ and execute the script as follows: `ruby lib\parser.rb full_source_file_path full_destiantion_directory`. [ _Windows users remember to use double \\ for the path for example c:\\directory\\path\\to\\file\\then_file.csv_ ]
 
 # Limitations or Cautions
 
