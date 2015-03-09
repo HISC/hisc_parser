@@ -1,5 +1,4 @@
 require 'main'
-require 'multimap'
 require 'csv'
 
 Main {
